@@ -1,4 +1,9 @@
 
 
-@import "base/variables.scss";
+@import "utilities/variables";
+@import "utilities/helpers";
 @import "base/reboot";
+@import "base/base";
+
+@import "atoms/buttons";
+@import "atoms/icons";

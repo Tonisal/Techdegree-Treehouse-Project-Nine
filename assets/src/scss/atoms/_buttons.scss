@@ -1,0 +1,13 @@
+.a-btn {
+    border-radius: $button-border-radius;
+    display: inline-block;
+
+    &.a-btn--primary {
+        background-color: $button-primary-bg-color;
+
+    }
+
+    &.a-btn--secondary {
+        background-color: $button-secondary-bg-color;
+    }
+}
