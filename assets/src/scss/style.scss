@@ -2,8 +2,11 @@
 
 @import "01_utilities/variables";
 @import "01_utilities/helpers";
-@import "02_base/reboot";
+@import "02_base/normalize";
 @import "02_base/base";
 
 @import "03_atoms/buttons";
 @import "03_atoms/icons";
+
+@import "05_organisms/header-bar";
+@import "05_organisms/main-nav";
