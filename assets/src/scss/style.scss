@@ -1,9 +1,9 @@
 
 
-@import "utilities/variables";
-@import "utilities/helpers";
-@import "base/reboot";
-@import "base/base";
+@import "01_utilities/variables";
+@import "01_utilities/helpers";
+@import "02_base/reboot";
+@import "02_base/base";
 
-@import "atoms/buttons";
-@import "atoms/icons";
+@import "03_atoms/buttons";
+@import "03_atoms/icons";
