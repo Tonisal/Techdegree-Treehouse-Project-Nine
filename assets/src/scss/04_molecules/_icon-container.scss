@@ -1,8 +1,13 @@
 .m-icon-container {
     &.m-icon-container--circular {
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 50%;
         width: 7.5rem;
         height: 7.5rem;
+
     }
+
+    &.m-icon
 }

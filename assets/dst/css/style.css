@@ -309,6 +309,11 @@ template {
 [hidden] {
   display: none; }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
 html {
   font-size: 62.5%; }
 
@@ -324,6 +329,9 @@ main {
 @media (min-width: 768px) {
   .page-content {
     display: flex; } }
+
+h3 {
+  color: #7377BF; }
 
 .a-btn {
   border-radius: 0.5rem;
@@ -342,6 +350,11 @@ main {
 .a-icon.a-icon--header-bar {
   height: 2rem;
   width: 2rem; }
+
+.a-icon.a-icon--social {
+  height: 4rem;
+  width: 4rem;
+  color: #fff; }
 
 @media (min-width: 768px) {
   .a-link.a-link--main-nav {
@@ -372,6 +385,20 @@ main {
   .m-meta-nav span {
     margin-left: 0.5rem;
     color: #fff; }
+
+.m-social-cards {
+  width: 100%;
+  padding: 25px;
+  border: 1px solid #B2B2B2;
+  display: flex; }
+
+.m-icon-container.m-icon-container--circular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 7.5rem;
+  height: 7.5rem; }
 
 .o-header-bar {
   display: flex;
