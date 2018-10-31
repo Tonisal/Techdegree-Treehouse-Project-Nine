@@ -1,0 +1,19 @@
+.m-meta-nav {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    width: 100%;
+    justify-content: flex-end;
+
+    .m-meta-nav__profile {
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+        border-left: 1px solid $white;
+    }
+
+    span {
+        margin-left: 0.5rem;
+        color: $white;
+    }
+}

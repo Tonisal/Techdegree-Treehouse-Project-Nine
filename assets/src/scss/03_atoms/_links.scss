@@ -1,0 +1,16 @@
+.a-link {
+    &.a-link--main-nav {
+
+        @media(min-width: $screen-md-min) {
+            margin-bottom: 4.5rem;
+        }
+
+        .a-icon {
+            transition: transform $transition-style;
+        }
+
+        &:hover .a-icon {
+            transform: scale(1.2);
+        }
+    }
+}

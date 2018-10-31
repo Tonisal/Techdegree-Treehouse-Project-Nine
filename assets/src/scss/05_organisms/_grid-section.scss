@@ -1,0 +1,31 @@
+.o-grid-section {
+    width: 100%;
+    .o-grid-section--row {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid $grey;
+    }
+
+    [class*="o-grid-section--col"] {
+
+
+    }
+
+    .o-grid-section--col-4 {
+        @media(min-width: $screen-md-min) {
+            width: calc(100% / 12 * 4);
+        }
+    }
+
+    .o-grid-section--col-6 {
+        @media(min-width: $screen-md-min) {
+            width: calc(100% / 12 * 6);
+        }
+    }
+
+    .o-grid-section--col-12 {
+        @media(min-width: $screen-md-min) {
+            width: calc(100% / 12 * 12);
+        }
+    }
+}

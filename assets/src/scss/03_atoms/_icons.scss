@@ -1,5 +1,4 @@
 .a-icon {
-
     &.a-icon--logo {
 
     }
@@ -7,5 +6,10 @@
     &.a-icon--main-nav {
         height: 3.2rem;
         width: 3.2rem;
+    }
+
+    &.a-icon--header-bar {
+        height: 2rem;
+        width: 2rem;
     }
 }
