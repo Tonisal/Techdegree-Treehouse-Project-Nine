@@ -17,6 +17,12 @@ main {
     width: 100%;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 .svg-container {
     display: none;
 }
@@ -26,5 +32,3 @@ main {
         display: flex;
     }
 }
-
-

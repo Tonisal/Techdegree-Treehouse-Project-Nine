@@ -13,7 +13,7 @@ $grey: #B2B2B2;
 
 //Breakpoints
 
-$screen-sm-min: 320px;
+$screen-sm-min: 320px; //<-- brauch ich den?
 $screen-md-min: 768px;
 $screen-lg-min: 1024px;
 
@@ -29,6 +29,7 @@ $button-secondary-bg-color: $grey;
 
 
 $transition-style: 0.2s ease-out;
+$border-radius-round-corners: 0.5rem;
 
 
 // Grid columns
