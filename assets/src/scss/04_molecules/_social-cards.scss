@@ -3,8 +3,19 @@
     padding: 25px;
     border: 1px solid $grey;
     display: flex;
+    border-radius: $border-radius-round-corners;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
     .m-social-cards__text {
       margin-left: 25px;
+    }
+
+    &:first-child {
+    margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
     }
 }

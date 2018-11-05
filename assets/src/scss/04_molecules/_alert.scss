@@ -1,5 +1,12 @@
 .m-alert {
-  border-radius: $border-radius-round-corners;
-  padding: 1.5rem;
-  color: $white;
+    border-radius: $border-radius-round-corners;
+    padding: {
+        left: 1.5rem;
+        top: 1.5rem;
+        bottom: 1.5rem;
+        right: 0.5rem;
+    }
+    color: $white;
+    width: 100%;
+    display: flex;
 }
