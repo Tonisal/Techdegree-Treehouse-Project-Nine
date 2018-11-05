@@ -1,10 +1,11 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const watch = require('gulp-watch');
+const cleanCSS = require('gulp-clean-css');
+const rename = require("gulp-rename");
+const concat = require('gulp-concat');
 
 sass.compiler = require('node-sass');
 
@@ -19,6 +20,23 @@ gulp.task('compileCSS', function () {
         .pipe(gulp.dest('assets/dst/css/min'))
 });
 
+gulp.task('concatJS', function() {
+    return gulp.src('assets/src/js/*.js')
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('assets/dst/js/'));
+});
+
+
+
 gulp.task('watch', function() {
     gulp.watch('assets/src/scss/**/*.scss', ['compileCSS']);
+    gulp.watch('assets/src/js/*.js', ['concatJS']);
 });
+
+
+
+
+
+
+
+
