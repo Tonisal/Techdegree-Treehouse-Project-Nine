@@ -1,8 +1,14 @@
 .a-image {
-    &.a-image--header-img {
+    border-radius: 50%;
+    &.a-image--medium {
         height: 3rem;
         width: 3rem;
-        border-radius: 50%;
+
+    }
+    &.a-image--large {
+        width: 4rem;
+        height: 4rem;
     }
 }
+
 

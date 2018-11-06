@@ -21,7 +21,7 @@ gulp.task('compileCSS', function () {
 });
 
 gulp.task('concatJS', function() {
-    return gulp.src('assets/src/js/*.js')
+    return gulp.src('assets/src/js/**/*.js')
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('assets/dst/js/'));
 });

@@ -5,13 +5,19 @@
         flex-wrap: wrap;
         width: 100%;
         border-bottom: 1px solid $grey;
+
+        @media(min-width: $screen-md-min) {
+            flex-wrap: nowrap;
+        }
     }
 
     [class*="o-grid-section--col"] {
         display: flex;
-        width: 100%;
+        flex-wrap: wrap;
+        padding: 2rem;
         @media(min-width: $screen-md-min) {
-            padding: 2rem;
+            flex-wrap: nowrap;
+
 
         }
 
