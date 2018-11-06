@@ -451,6 +451,10 @@ h3 {
   width: 100%;
   display: flex; }
 
+.m-image-text {
+  padding-top: 2rem;
+  display: flex; }
+
 .o-header-bar {
   display: flex;
   padding-top: 1.5rem;
