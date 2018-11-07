@@ -5,6 +5,7 @@
 
 @import "02_base/normalize";
 @import "02_base/base";
+@import "02_base/grid";
 @import "02_base/type";
 
 @import "03_atoms/buttons";
@@ -21,4 +22,4 @@
 
 @import "05_organisms/header-bar";
 @import "05_organisms/main-nav";
-@import "05_organisms/grid-section";
+@import "05_organisms/section";

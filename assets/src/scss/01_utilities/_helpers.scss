@@ -14,6 +14,7 @@
     background-color: $green-dark;
 }
 
-.u-flex-column {
+.u-flex-dir-col {
+    display: flex;
     flex-direction: column;
 }

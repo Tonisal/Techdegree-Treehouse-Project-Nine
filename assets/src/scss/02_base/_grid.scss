@@ -1,0 +1,37 @@
+.content-container {
+    width: 100%;
+    .grid-row {
+        display: flex;
+        flex-wrap: wrap; //fit into one line
+        border-bottom: 1px solid $grey;
+
+        @media(min-width: $screen-md-min) {
+            flex-wrap: nowrap; //switch into more lines
+        }
+
+        [class*='grid-row--'] {
+            flex-basis: 100%;
+        }
+
+        .grid-row--4-cols {
+            @media(min-width: $screen-md-min) {
+                max-width: 100% / 12 * 4;
+                flex-basis: (100% / 12 * 4);
+            }
+        }
+
+        .grid-row--6-cols {
+            @media(min-width: $screen-md-min) {
+                max-width: 100% / 12 * 6;
+                flex-basis: (100% / 12 * 6);
+            }
+        }
+
+        .grid-row--12-cols {
+            @media(min-width: $screen-md-min) {
+                max-width: 100% / 12 * 12;
+                flex-basis: (100% / 12 * 12);
+            }
+        }
+    }
+}

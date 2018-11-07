@@ -26,4 +26,37 @@
         border: 0;
     }
 
+    &.a-btn--settings-switch {
+        border-radius: 2rem;
+        width: 9rem;
+        position: relative;
+        text-align: left;
+        background-color: $purple-light;
+        border: $border-style;
+        display: flex;
+        align-items: center;
+        padding-right: 5px;
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+
+        &:after {
+            content: '';
+            height: 2.2rem;
+            width: 2.2rem;
+            right: 5px;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            background-color: $white;
+            border: $border-style;
+            transition: right 2s ease-out;
+        }
+
+        &:active {
+            &:after {
+              left: 5px;
+            }
+        }
+    }
+
 }
