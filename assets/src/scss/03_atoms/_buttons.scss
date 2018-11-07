@@ -3,14 +3,20 @@
     display: inline-block;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 700;
 
     &.a-btn--primary {
         background-color: $purple-light;
-
     }
 
     &.a-btn--secondary {
         background-color: $grey;
+    }
+
+    &.a-btn--fullwidth {
+        width: 100%;
     }
 
     &.a-btn--close-alert {

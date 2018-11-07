@@ -10,6 +10,9 @@
 .u-bg-color-green-dark {
   background-color: #74B1BF; }
 
+.u-flex-column {
+  flex-direction: column; }
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -325,8 +328,13 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #7377BF; }
 
 .svg-container {
   display: none; }
@@ -349,11 +357,16 @@ h3 {
   border-radius: 0.5rem;
   display: inline-block;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700; }
   .a-btn.a-btn--primary {
     background-color: #7377BF; }
   .a-btn.a-btn--secondary {
     background-color: #B2B2B2; }
+  .a-btn.a-btn--fullwidth {
+    width: 100%; }
   .a-btn.a-btn--close-alert {
     padding: 0;
     margin-left: auto;
@@ -453,7 +466,20 @@ h3 {
 
 .m-image-text {
   padding-top: 2rem;
-  display: flex; }
+  padding-bottom: 1.5rem;
+  display: flex;
+  width: 100%;
+  align-items: center; }
+  .m-image-text:not(:last-child) {
+    border-bottom: 1px solid #B2B2B2; }
+  .m-image-text .m-image-text__text-container {
+    margin-left: 10px; }
+  .m-image-text .m-image-text__headline,
+  .m-image-text .m-image-text__subline,
+  .m-image-text .m-image-text__date {
+    font-size: 1.4rem; }
+  .m-image-text .m-image-text__date {
+    margin-left: auto; }
 
 .o-header-bar {
   display: flex;

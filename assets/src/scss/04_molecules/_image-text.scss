@@ -1,12 +1,26 @@
 .m-image-text {
     padding-top: 2rem;
+    padding-bottom: 1.5rem;
     display: flex;
+    width: 100%;
+    align-items: center;
+
+    &:not(:last-child) {
+        border-bottom: $border-style;
+    }
 
     .m-image-text__text-container {
+        margin-left: 10px;
 
     }
 
-    .m-image-text__highlight {
-        
+    .m-image-text__headline,
+    .m-image-text__subline,
+    .m-image-text__date {
+        font-size: 1.4rem;
+    }
+
+    .m-image-text__date {
+        margin-left: auto;
     }
 }
