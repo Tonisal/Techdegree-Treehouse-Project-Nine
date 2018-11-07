@@ -411,8 +411,8 @@ h3 {
     padding-bottom: 0.9rem; }
     .a-btn.a-btn--settings-switch:after {
       content: '';
-      height: 2.2rem;
-      width: 2.2rem;
+      height: 2.3rem;
+      width: 2.3rem;
       right: 5px;
       display: inline-block;
       position: absolute;
@@ -420,8 +420,10 @@ h3 {
       background-color: #fff;
       border: 1px solid #B2B2B2;
       transition: right 2s ease-out; }
-    .a-btn.a-btn--settings-switch:active:after {
+    .a-btn.a-btn--settings-switch.off:after {
       left: 5px; }
+    .a-btn.a-btn--settings-switch span {
+      margin-left: auto; }
 
 .a-icon.a-icon--main-nav {
   height: 3.2rem;
@@ -454,6 +456,10 @@ h3 {
   .a-image.a-image--large {
     width: 4rem;
     height: 4rem; }
+
+.a-textarea {
+  border: 1px solid #B2B2B2;
+  border-radius: 0.5rem; }
 
 .m-meta-nav {
   display: flex;
@@ -496,7 +502,7 @@ h3 {
   height: 7.5rem; }
 
 .m-input {
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   border: 1px solid #B2B2B2;
   padding-top: 15px;
   padding-right: 10px;

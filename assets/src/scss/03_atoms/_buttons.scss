@@ -41,8 +41,8 @@
 
         &:after {
             content: '';
-            height: 2.2rem;
-            width: 2.2rem;
+            height: 2.3rem;
+            width: 2.3rem;
             right: 5px;
             display: inline-block;
             position: absolute;
@@ -52,11 +52,14 @@
             transition: right 2s ease-out;
         }
 
-        &:active {
+        &.off {
             &:after {
-              left: 5px;
+                left: 5px;
             }
         }
-    }
 
+        span {
+            margin-left: auto;
+        }
+    }
 }
