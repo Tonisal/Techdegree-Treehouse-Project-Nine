@@ -1,16 +1,21 @@
 .content-container {
     width: 100%;
+    border-bottom: $border-style;
     .grid-row {
         display: flex;
         flex-wrap: wrap; //fit into one line
-        border-bottom: 1px solid $grey;
 
         @media(min-width: $screen-md-min) {
             flex-wrap: nowrap; //switch into more lines
         }
 
         [class*='grid-row--'] {
+            padding: $spacer;
             flex-basis: 100%;
+
+            &:not(:last-child) {
+                border-right: $border-style;
+            }
         }
 
         .grid-row--4-cols {

@@ -1,12 +1,12 @@
-.a-textarea {
-    border: $border-style;
+.a-select {
     border-radius: $border-radius-round-corners;
-    margin-bottom: $spacer;
-    background-color: $grey-light;
+    border: $border-style;
     padding: {
         top: 1.5rem;
         right: 2rem;
         bottom: 1.5rem;
         left: 2rem;
     }
+    color: $grey;
+    margin-bottom: $spacer;
 }

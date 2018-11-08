@@ -1,11 +1,5 @@
 .m-input {
-  border-radius: $border-radius-round-corners;
-  border: 1px solid $grey;
-  padding: {
-    top: 15px;
-    right: 10px;
-    bottom: 15px;
-    left: 40px;
-  }
-  color: $grey;
+    .a-input {
+        margin-bottom: 0;
+    }
 }

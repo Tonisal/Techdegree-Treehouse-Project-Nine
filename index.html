@@ -85,8 +85,12 @@
         <section class="o-section">
             <div class="content-container">
                 <div class="grid-row">
-                    <div class="grid-row--12-cols">
+                    <div class="grid-row--12-cols u-flex">
                         <h1>Dashboard</h1>
+                        <div class="m-input">
+                            <input class="a-input">
+                            <use xlink:href="#icon-twitter"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,6 +107,15 @@
                                 x
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="o-section">
+            <div class="content-container">
+                <div class="grid-row">
+                    <div class="grid-row--12-cols">
+                        <canvas id="traffic" width="100%"></canvas>
                     </div>
                 </div>
             </div>
@@ -241,21 +254,27 @@
                 <div class="grid-row">
                     <div class="grid-row--6-cols u-flex-dir-col">
                         <h2>message user</h2>
-                        <input type="text">
-                        <textarea class="a-textarea" rows="10"></textarea>
+                        <input placeholder="Search for User" class="a-input" type="text">
+                        <textarea placeholder="Message for User" class="a-textarea" rows="10"></textarea>
                         <button class="a-btn a-btn--primary a-btn--fullwidth">send</button>
-                        <button class="a-btn a-btn--settings-switch">ON</button>
                     </div>
                     <div class="grid-row--6-cols u-flex-dir-col">
                         <h2>settings</h2>
-
+                        Send E-Mail Notification
+                        <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
+                        Set Profile to Public
+                        <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
+                        <select class="a-select">
+                            <option>German</option>
+                            <option>English</option>
+                        </select>
+                        <button class="a-btn a-btn--primary">save</button>
+                        <button class="a-btn a-btn--secondary">cancel</button>
                     </div>
                 </div>
             </div>
         </section>
-        <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
     </main>
 </div>
-<footer></footer>
 </body>
 </html>
