@@ -89,7 +89,9 @@
                         <h1>Dashboard</h1>
                         <div class="m-input">
                             <input class="a-input">
-                            <use xlink:href="#icon-twitter"/>
+                            <svg class="a-icon a-icon--main-nav">
+                                <use xlink:href="#icon-twitter"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -111,11 +113,24 @@
                 </div>
             </div>
         </section>
-        <section class="o-section">
+        <section class="o-section o-bar-chart">
             <div class="content-container">
                 <div class="grid-row">
-                    <div class="grid-row--12-cols">
-                        <canvas id="traffic" width="100%"></canvas>
+                    <div class="grid-row--12-cols u-position-relative">
+                        <canvas id="traffic"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="o-section o-bar-chart">
+            <div class="content-container">
+                <div class="grid-row">
+                    <div class="grid-row--6-cols u-position-relative">
+                        <canvas id="daily-traffic"></canvas>
+                    </div>
+
+                    <div class="grid-row--6-cols u-position-relative">
+                        <canvas id="mobile-users"></canvas>
                     </div>
                 </div>
             </div>

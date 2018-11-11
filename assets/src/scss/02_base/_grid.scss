@@ -34,8 +34,8 @@
 
         .grid-row--12-cols {
             @media(min-width: $screen-md-min) {
-                max-width: 100% / 12 * 12;
-                flex-basis: (100% / 12 * 12);
+                width: 100% / 12 * 12;
+                //flex-basis: (100% / 12 * 12);
             }
         }
     }

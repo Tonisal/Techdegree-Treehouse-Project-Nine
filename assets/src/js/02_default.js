@@ -1,18 +1,18 @@
 function toggleSettingsSwitch() {
-
     $('.a-btn--settings-switch').click(function () {
-        console.log('click');
         $(this).toggleClass('off');
     });
 }
 
+function closeAlertBar() {
+    $('.a-btn--close-alert').click(function () {
+        $(this).parent().hide();
+    });
+}
 
-
-$(document).ready(function () {
-    toggleSettingsSwitch();
-
-    var ctx = document.getElementById("traffic").getContext('2d');
-    var myChart = new Chart(ctx, {
+function initiateTrafficDiagram() {
+    const trafficDiagram = document.getElementById("traffic").getContext('2d');
+    const diagram1 = new Chart(trafficDiagram, {
         responsive: true,
         type: 'line',
         data: {
@@ -20,26 +20,15 @@ $(document).ready(function () {
             datasets: [{
                 label: '# of Votes',
                 data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
+                backgroundColor: 'rgba(115,119,191,0.2)',
+                borderColor: 'rgba(115,119,191,1)',
                 borderWidth: 1
             }]
         },
         options: {
+            legend: {
+                display: false,
+            },
             scales: {
                 yAxes: [{
                     ticks: {
@@ -49,8 +38,73 @@ $(document).ready(function () {
             }
         }
     });
+}
 
+function initiateDailyTrafficDiagram() {
+    const dailyTrafficDiagram = document.getElementById("daily-traffic").getContext('2d');
+    var diagram2 = new Chart(dailyTrafficDiagram, {
+        responsive: true,
+        type: 'bar',
+        data: {
+            labels: ["S", "M", "T", "W", "T", "F", "S"],
+            datasets: [{
+                label: '',
+                data: [75, 100, 175, 125, 225, 225, 200, 100],
+                backgroundColor: '#7377BF',
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+}
 
+function initiateMobileUsersDiagram() {
+    const mobileUsersDiagram = document.getElementById("mobile-users").getContext('2d');
+    const diagram3 = new Chart(mobileUsersDiagram, {
+        responsive: true,
+        type: 'doughnut',
+        data: {
+            labels: ["Phones", "Tables", "Desktop"],
+            datasets: [{
+                label: '',
+                data: [15, 15, 70],
+                backgroundColor: [
+                    '#81C98F',
+                    '#74B1BF',
+                    '#7377BF'
+                ],
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+}
 
-
+$(document).ready(function () {
+    console.log('loaded');
+    toggleSettingsSwitch();
+    initiateTrafficDiagram();
+    initiateDailyTrafficDiagram();
+    initiateMobileUsersDiagram();
+    closeAlertBar();
 });
