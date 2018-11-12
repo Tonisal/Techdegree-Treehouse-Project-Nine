@@ -16,6 +16,14 @@
             &:not(:last-child) {
                 border-right: $border-style;
             }
+
+            &.grid-row--no-border-right {
+                border-right: none;
+            }
+
+            &.grid-row--no-padding {
+                padding: 0;
+            }
         }
 
         .grid-row--4-cols {

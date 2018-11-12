@@ -85,11 +85,13 @@
         <section class="o-section">
             <div class="content-container">
                 <div class="grid-row">
-                    <div class="grid-row--12-cols u-flex">
+                    <div class="grid-row--12-cols grid-row--no-padding u-flex">
                         <h1>Dashboard</h1>
                         <div class="m-input">
-                            <input class="a-input">
-                            <use xlink:href="#icon-twitter"/>
+                            <div class="m-input__input">
+                                <input class="a-input">
+                                <use xlink:href="#icon-twitter"/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,7 @@
         <section class="o-section">
             <div class="content-container">
                 <div class="grid-row">
-                    <div class="grid-row--4-cols">
+                    <div class="grid-row--4-cols grid-row--no-border-right">
                         <div class="m-social-cards">
                             <div class="m-icon-container m-icon-container--circular u-bg-color-purple-light">
                                 <svg class="a-icon a-icon--social">
@@ -136,7 +138,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-row--4-cols">
+                    <div class="grid-row--4-cols grid-row--no-border-right">
                         <div class="m-social-cards">
                             <div class="m-icon-container m-icon-container--circular u-bg-color-purple-light">
                                 <svg class="a-icon a-icon--social">
@@ -260,16 +262,22 @@
                     </div>
                     <div class="grid-row--6-cols u-flex-dir-col">
                         <h2>settings</h2>
-                        Send E-Mail Notification
-                        <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
-                        Set Profile to Public
-                        <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
+                        <div class="m-settings-switch">
+                            Send E-Mail Notification
+                            <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
+                        </div>
+                        <div class="m-settings-switch">
+                            Set Profile to Public
+                            <button class="a-btn a-btn--settings-switch">ON<span>OFF</span></button>
+                        </div>
                         <select class="a-select">
                             <option>German</option>
                             <option>English</option>
                         </select>
+                        <div class="u-flex">
                         <button class="a-btn a-btn--primary">save</button>
                         <button class="a-btn a-btn--secondary">cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,7 @@
 .a-select {
     border-radius: $border-radius-round-corners;
     border: $border-style;
-    padding: {
-        top: 1.5rem;
-        right: 2rem;
-        bottom: 1.5rem;
-        left: 2rem;
-    }
+    height: 4.5rem;
     color: $grey;
     margin-bottom: $spacer;
 }
