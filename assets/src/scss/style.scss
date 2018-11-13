@@ -13,6 +13,7 @@
 @import "03_atoms/input";
 @import "03_atoms/select";
 @import "03_atoms/links";
+@import "03_atoms/logo";
 @import "03_atoms/images";
 @import "03_atoms/textarea";
 
@@ -22,8 +23,11 @@
 @import "04_molecules/input";
 @import "04_molecules/alert";
 @import "04_molecules/image-text";
+@import "04_molecules/settings-switch";
 
 @import "05_organisms/header-bar";
 @import "05_organisms/main-nav";
 @import "05_organisms/section";
 @import "05_organisms/o-bar-chart";
+@import "05_organisms/settings";
+@import "05_organisms/section-head-search";

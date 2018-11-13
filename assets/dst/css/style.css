@@ -15,7 +15,8 @@
   flex-direction: column; }
 
 .u-flex {
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .u-position-relative {
   position: relative; }
@@ -332,6 +333,9 @@ body {
 
 main {
   width: 100%; }
+  @media (min-width: 768px) {
+    main {
+      width: calc(100% - 82px); } }
 
 h1,
 h2,
@@ -351,8 +355,7 @@ a {
     display: flex; } }
 
 .content-container {
-  width: 100%;
-  border-bottom: 1px solid #B2B2B2; }
+  width: 100%; }
   .content-container .grid-row {
     display: flex;
     flex-wrap: wrap; }
@@ -361,9 +364,14 @@ a {
         flex-wrap: nowrap; } }
     .content-container .grid-row [class*='grid-row--'] {
       padding: 2rem;
-      flex-basis: 100%; }
+      flex-basis: 100%;
+      overflow: hidden; }
       .content-container .grid-row [class*='grid-row--']:not(:last-child) {
         border-right: 1px solid #B2B2B2; }
+      .content-container .grid-row [class*='grid-row--'].grid-row--no-border-right {
+        border-right: none; }
+      .content-container .grid-row [class*='grid-row--'].grid-row--no-padding {
+        padding: 0; }
     @media (min-width: 768px) {
       .content-container .grid-row .grid-row--4-cols {
         max-width: 33.33333%;
@@ -377,7 +385,10 @@ a {
         width: 100%; } }
 
 h1 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  font-weight: 400; }
 
 h2 {
   text-transform: uppercase;
@@ -415,7 +426,7 @@ h3 {
     border: 1px solid #B2B2B2;
     display: flex;
     align-items: center;
-    padding-right: 5px;
+    padding-right: 0.7rem;
     padding-top: 0.9rem;
     padding-bottom: 0.9rem; }
     .a-btn.a-btn--settings-switch:after {
@@ -428,9 +439,9 @@ h3 {
       border-radius: 50%;
       background-color: #fff;
       border: 1px solid #B2B2B2;
-      transition: right 2s ease-out; }
+      transition: right 0.2s ease-out; }
     .a-btn.a-btn--settings-switch.off:after {
-      left: 5px; }
+      right: calc(100% - 2.3rem); }
     .a-btn.a-btn--settings-switch span {
       margin-left: auto; }
 
@@ -440,12 +451,25 @@ h3 {
 
 .a-icon.a-icon--header-bar {
   height: 2rem;
-  width: 2rem; }
+  width: 2rem;
+  margin-right: 2rem; }
+  .a-icon.a-icon--header-bar::after {
+    content: 'test';
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px; }
 
 .a-icon.a-icon--social {
   height: 4rem;
   width: 4rem;
   color: #fff; }
+
+.a-icon.a-icon--search {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  color: #7377BF; }
 
 .a-input {
   border-radius: 0.5rem;
@@ -455,17 +479,16 @@ h3 {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   color: #B2B2B2;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  background-color: #FBFBFB; }
 
 .a-select {
   border-radius: 0.5rem;
   border: 1px solid #B2B2B2;
-  padding-top: 1.5rem;
-  padding-right: 2rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2rem;
+  height: 4.5rem;
   color: #B2B2B2;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  padding-left: 2rem; }
 
 @media (min-width: 768px) {
   .a-link.a-link--main-nav {
@@ -476,6 +499,21 @@ h3 {
 
 .a-link.a-link--main-nav:hover .a-icon {
   transform: scale(1.2); }
+
+.a-logo {
+  font-size: 2.4rem;
+  color: #fff;
+  position: relative; }
+  .a-logo .a-logo__bold {
+    font-weight: 700; }
+  .a-logo .a-logo__condensed {
+    font-weight: 100;
+    margin-left: -5px; }
+  .a-logo sup {
+    margin-left: -8px;
+    font-weight: 100;
+    font-size: 0.8rem;
+    top: -1.3rem; }
 
 .a-image {
   border-radius: 50%; }
@@ -499,8 +537,7 @@ h3 {
 .m-meta-nav {
   display: flex;
   align-items: center;
-  padding-right: 1.5rem;
-  width: 100%;
+  flex-grow: 2;
   justify-content: flex-end; }
   .m-meta-nav .m-meta-nav__profile {
     display: flex;
@@ -508,8 +545,7 @@ h3 {
     padding-left: 1.5rem;
     border-left: 1px solid #fff; }
   .m-meta-nav span {
-    margin-left: 0.5rem;
-    color: #fff; }
+    margin-left: 0.5rem; }
 
 .m-social-cards {
   width: 100%;
@@ -536,18 +572,34 @@ h3 {
   width: 7.5rem;
   height: 7.5rem; }
 
-.m-input .a-input {
-  margin-bottom: 0; }
+.m-input {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #B2B2B2;
+  border-left: 1px solid #B2B2B2;
+  background-color: #FBFBFB; }
+  .m-input .m-input__input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .m-input .m-input__input .a-input {
+      margin-bottom: 0;
+      background-color: #fff; }
 
 .m-alert {
   border-radius: 0.5rem;
-  padding-left: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-right: 0.5rem;
+  padding: 1.5rem;
   color: #fff;
   width: 100%;
-  display: flex; }
+  display: flex;
+  align-items: center; }
+  .m-alert strong {
+    margin-right: 1rem; }
 
 .m-image-text {
   padding-top: 2rem;
@@ -566,10 +618,18 @@ h3 {
   .m-image-text .m-image-text__date {
     margin-left: auto; }
 
+.m-settings-switch {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+  max-width: 50%; }
+  .m-settings-switch .a-btn--settings-switch {
+    margin-left: auto; }
+
 .o-header-bar {
   display: flex;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
+  padding: 1.5rem;
+  color: #fff; }
   .o-header-bar path {
     color: #fff; }
 
@@ -587,3 +647,26 @@ h3 {
       padding-left: 2.5rem;
       padding-right: 2.5rem;
       padding-top: 3rem; } }
+
+@media (min-width: 768px) {
+  .o-section.o-section--border-bottom {
+    border-bottom: 1px solid #B2B2B2; } }
+
+.o-settings .a-btn--primary {
+  margin-right: 1.5rem; }
+
+.o-settings .a-btn--secondary {
+  margin-left: 1.5rem; }
+
+.o-section-head-search .grid-row--12-cols {
+  display: flex;
+  flex-direction: column; }
+  .o-section-head-search .grid-row--12-cols .m-input {
+    width: 100%; }
+  .o-section-head-search .grid-row--12-cols h1 {
+    display: none; }
+  @media (min-width: 768px) {
+    .o-section-head-search .grid-row--12-cols {
+      flex-direction: row; }
+      .o-section-head-search .grid-row--12-cols h1 {
+        display: block; } }

@@ -1,0 +1,24 @@
+.o-section-head-search {
+    .grid-row--12-cols {
+        display: flex;
+        flex-direction: column;
+
+        .m-input {
+            width: 100%;
+        }
+
+        h1 {
+            display: none;
+        }
+
+
+        @media(min-width: $screen-md-min) {
+            flex-direction: row;
+
+            h1 {
+                display: block;
+            }
+
+        }
+    }
+}

@@ -1,6 +1,8 @@
 .content-container {
     width: 100%;
-    border-bottom: $border-style;
+
+
+
     .grid-row {
         display: flex;
         flex-wrap: wrap; //fit into one line
@@ -12,9 +14,18 @@
         [class*='grid-row--'] {
             padding: $spacer;
             flex-basis: 100%;
+            overflow: hidden;
 
             &:not(:last-child) {
                 border-right: $border-style;
+            }
+
+            &.grid-row--no-border-right {
+                border-right: none;
+            }
+
+            &.grid-row--no-padding {
+                padding: 0;
             }
         }
 

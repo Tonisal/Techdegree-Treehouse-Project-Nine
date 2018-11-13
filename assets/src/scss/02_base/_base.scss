@@ -15,6 +15,10 @@ body {
 
 main {
     width: 100%;
+
+    @media(min-width: $screen-md-min) {
+        width: calc(100% - 82px);
+    }
 }
 
 h1,

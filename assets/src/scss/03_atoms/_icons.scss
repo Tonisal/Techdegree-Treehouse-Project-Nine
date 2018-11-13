@@ -1,8 +1,4 @@
 .a-icon {
-    &.a-icon--logo {
-
-    }
-
     &.a-icon--main-nav {
         height: 3.2rem;
         width: 3.2rem;
@@ -11,11 +7,27 @@
     &.a-icon--header-bar {
         height: 2rem;
         width: 2rem;
+        margin-right: 2rem;
+
+        &::after {
+            content: 'test';
+            position: absolute;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
     }
 
     &.a-icon--social {
         height: 4rem;
         width: 4rem;
         color: $white;
+    }
+
+    &.a-icon--search {
+        height: 2.5rem;
+        width: 2.5rem;
+        position: absolute;
+        color: $purple-light;
     }
 }

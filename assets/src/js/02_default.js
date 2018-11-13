@@ -10,6 +10,14 @@ function closeAlertBar() {
     });
 }
 
+function submitMessage() {
+    $('.js-submit-form').click(function () {
+        $(this).siblings('.a-textarea').val('');
+        $(this).siblings('.o-settings__feedback').text('Hat geklappt!');
+
+    });
+}
+
 function initiateTrafficDiagram() {
     const trafficDiagram = document.getElementById("traffic").getContext('2d');
     const diagram1 = new Chart(trafficDiagram, {
@@ -87,7 +95,7 @@ function initiateMobileUsersDiagram() {
         },
         options: {
             legend: {
-                display: false
+                display: true
             },
             scales: {
                 yAxes: [{
@@ -107,4 +115,5 @@ $(document).ready(function () {
     initiateDailyTrafficDiagram();
     initiateMobileUsersDiagram();
     closeAlertBar();
+    submitMessage();
 });

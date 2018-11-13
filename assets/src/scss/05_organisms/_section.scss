@@ -1,3 +1,9 @@
 .o-section {
 
+    &.o-section--border-bottom {
+
+        @media(min-width: $screen-md-min) {
+            border-bottom: $border-style;
+        }
+    }
 }

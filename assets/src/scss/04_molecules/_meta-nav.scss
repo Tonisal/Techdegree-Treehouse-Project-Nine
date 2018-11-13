@@ -1,8 +1,7 @@
 .m-meta-nav {
     display: flex;
     align-items: center;
-    padding-right: 1.5rem;
-    width: 100%;
+    flex-grow: 2;
     justify-content: flex-end;
 
     .m-meta-nav__profile {
@@ -14,6 +13,6 @@
 
     span {
         margin-left: 0.5rem;
-        color: $white;
     }
+
 }

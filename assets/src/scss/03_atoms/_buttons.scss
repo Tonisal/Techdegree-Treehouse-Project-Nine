@@ -35,7 +35,7 @@
         border: $border-style;
         display: flex;
         align-items: center;
-        padding-right: 5px;
+        padding-right: 0.7rem;
         padding-top: 0.9rem;
         padding-bottom: 0.9rem;
 
@@ -49,12 +49,12 @@
             border-radius: 50%;
             background-color: $white;
             border: $border-style;
-            transition: right 2s ease-out;
+            transition: right $transition-style;
         }
 
         &.off {
             &:after {
-                left: 5px;
+                right: calc(100% - 2.3rem);
             }
         }
 
