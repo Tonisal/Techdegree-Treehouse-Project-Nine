@@ -2,7 +2,11 @@
     display: flex;
     margin-bottom: 3rem;
     align-items: center;
-    max-width: 50%;
+    max-width: 100%;
+
+    @media(min-width: $screen-md-min) {
+        max-width: 70%;
+    }
 
     .a-btn--settings-switch {
         margin-left: auto;
