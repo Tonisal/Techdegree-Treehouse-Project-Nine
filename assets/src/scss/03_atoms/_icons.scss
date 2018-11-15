@@ -8,14 +8,6 @@
         height: 2rem;
         width: 2rem;
         margin-right: 2rem;
-
-        &::after {
-            content: 'test';
-            position: absolute;
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-        }
     }
 
     &.a-icon--social {

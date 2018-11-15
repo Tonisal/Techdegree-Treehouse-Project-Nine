@@ -35,7 +35,10 @@ function submitMessage() {
         if (user && message) {
             feedback.addClass('o-settings__feedback--success');
             feedback.text('Your message has been sent to ' + user);
-        } else if (!user) {
+        } else if (!user && !message) {
+            feedback.addClass('o-settings__feedback--warning');
+            feedback.text('Please enter a recipient name and message!');
+        }  else if (!user) {
             feedback.addClass('o-settings__feedback--warning');
             feedback.text('Please enter a recipient name!');
         } else if (!message) {

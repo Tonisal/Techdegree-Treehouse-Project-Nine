@@ -453,12 +453,6 @@ h3 {
   height: 2rem;
   width: 2rem;
   margin-right: 2rem; }
-  .a-icon.a-icon--header-bar::after {
-    content: 'test';
-    position: absolute;
-    display: inline-block;
-    width: 30px;
-    height: 30px; }
 
 .a-icon.a-icon--social {
   height: 4rem;
@@ -539,6 +533,18 @@ h3 {
   align-items: center;
   flex-grow: 2;
   justify-content: flex-end; }
+  .m-meta-nav .m-meta-nav__icon-container {
+    position: relative; }
+    .m-meta-nav .m-meta-nav__icon-container::after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      right: 1.5rem;
+      border-radius: 50%;
+      background-color: #81C98F;
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem; }
   .m-meta-nav .m-meta-nav__profile {
     display: flex;
     align-items: center;

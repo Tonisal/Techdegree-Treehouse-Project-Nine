@@ -4,6 +4,21 @@
     flex-grow: 2;
     justify-content: flex-end;
 
+    .m-meta-nav__icon-container {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -0.5rem;
+            right: 1.5rem;
+            border-radius: $border-radius-circular;
+            background-color: $green-light;
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+
     .m-meta-nav__profile {
         display: flex;
         align-items: center;
