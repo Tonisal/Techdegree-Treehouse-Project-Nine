@@ -678,6 +678,15 @@ h3 {
 .o-settings .a-btn--secondary {
   margin-left: 1.5rem; }
 
+.o-settings .o-settings__feedback {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem; }
+  .o-settings .o-settings__feedback.o-settings__feedback--success {
+    color: #81C98F; }
+  .o-settings .o-settings__feedback.o-settings__feedback--warning {
+    color: #ff0000; }
+
 .o-head-search .grid-row--12-cols {
   display: flex;
   flex-direction: column; }

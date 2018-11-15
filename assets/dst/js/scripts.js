@@ -24,9 +24,24 @@ function closeAlertBar() {
 
 function submitMessage() {
     $('.js-submit-form').click(function () {
-        $(this).siblings('.a-textarea').val('');
-        $(this).siblings('.o-settings__feedback').text('Hat geklappt!');
+        var feedback = $(this).siblings('.o-settings__feedback');
+        var user = $(this).siblings('.a-input').val();
+        var message = $(this).siblings('.a-textarea').val();
 
+        feedback.removeClass('o-settings__feedback--success');
+        feedback.removeClass('o-settings__feedback--warning');
+        feedback.text('');
+
+        if (user && message) {
+            feedback.addClass('o-settings__feedback--success');
+            feedback.text('Your message has been sent to ' + user);
+        } else if (!user) {
+            feedback.addClass('o-settings__feedback--warning');
+            feedback.text('Please enter a recipient name!');
+        } else if (!message) {
+            feedback.addClass('o-settings__feedback--warning');
+            feedback.text('Please enter a message you want to send!');
+        }
     });
 }
 

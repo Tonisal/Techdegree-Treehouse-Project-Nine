@@ -6,4 +6,18 @@
     .a-btn--secondary {
         margin-left: 1.5rem;
     }
+
+    .o-settings__feedback {
+        margin-bottom: $spacer;
+        font-weight: 700;
+        font-size: 2rem;
+
+        &.o-settings__feedback--success {
+            color: $success;
+        }
+
+        &.o-settings__feedback--warning {
+            color: $warning;
+        }
+    }
 }
